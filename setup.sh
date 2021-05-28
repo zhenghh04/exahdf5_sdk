@@ -8,6 +8,7 @@ function cmkdir() {
 export EXAHDF5_ROOT=$PWD
 export SDK_DIR=$EXAHDF5_ROOT/soft/
 export HDF5_ROOT=$SDK_DIR/hdf5
+export HDF5_HOME=$HDF5_ROOT
 export HDF5_DIR=$HDF5_ROOT
 export HDF5_VOL_DIR=$SDK_DIR/hdf5/vol
 export ABT_DIR=$SDK_DIR/argobots/
