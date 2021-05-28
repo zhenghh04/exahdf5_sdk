@@ -7,7 +7,15 @@ echo "
 #define H5E_BADATOM 1000
 #endif
 " >> $SDK_DIR/hdf5/include/hdf5.h
+
+
+version=$(python -c "import sys; print('%s.%s'%(sys.version_info[0], sys.version_info[1]))")
+export PYTHONPATH=$SDK_DIR/h5py/lib/python$version/site-packages:$PYTHONPATH
+
 cd h5py
 HDF5_MPI=ON CC=mpicc CXX=mpicxx python setup.py build
 HDF5_MPI=ON CC=mpicc CXX=mpicxx python setup.py install --prefix=$SDK_DIR/h5py
 cd -
+export H5PY_PATH=$(ls $SDK_DIR/h5py/lib/python$version/site-packages/*.egg)
+
+
