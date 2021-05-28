@@ -2,7 +2,7 @@
 echo "Building h5py"
 git clone https://github.com/h5py/h5py.git
 echo "
-#include "hdf5dev.h"
+#include \"hdf5dev.h\"
 #ifndef H5E_BADATOM
 #define H5E_BADATOM 1000
 #endif
