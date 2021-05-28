@@ -14,4 +14,3 @@ export ABT_DIR=$SDK_DIR/argobots/
 export CC=mpicc
 export CXX=mpicxx
 cmkdir $SDK_DIR $HDF5_ROOT $HDF5_VOL_DIR $ABT_DIR
-

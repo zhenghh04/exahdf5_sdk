@@ -7,6 +7,7 @@ source build_argobots.sh
 source build_async.sh
 source build_passthru.sh
 source build_h5py.sh
+sed -e "s/PWD/$PWD/g" modulefiles/exahdf5.template > modulefiles/exahdf5
 
 
 
