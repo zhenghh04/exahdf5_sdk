@@ -1,0 +1,40 @@
+#%Module2.0
+
+conflict gcc-cross-aarch64
+
+proc ModulesHelp { } {
+}
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys        [uname sysname]
+set os         [uname release]
+set HOME       /home/hzheng
+
+if {[module-info mode load]} {
+    module load intelpython36
+}
+
+if {[module-info mode remove]} {
+}
+
+set     EXAHDF5_ROOT PWD
+setenv  EXAHDF5_ROOT PWD
+setenv  SDK_DIR $EXAHDF5_ROOT/soft/
+set     SDK_DIR $EXAHDF5_ROOT/soft/
+setenv  HDF5_ROOT $SDK_DIR/hdf5
+set     HDF5_ROOT $SDK_DIR/hdf5
+setenv  HDF5_DIR $HDF5_ROOT
+setenv  HDF5_VOL_DIR $SDK_DIR/hdf5/vol
+set     HDF5_VOL_DIR $SDK_DIR/hdf5/vol
+setenv  ABT_DIR $SDK_DIR/argobots/
+set  ABT_DIR $SDK_DIR/argobots
+
+prepend-path	 PATH $HDF5_ROOT/bin
+prepend-path	 PATH $HDF5_VOL_DIR/bin
+prepend-path	 CPATH $HDF5_ROOT/include
+prepend-path     CPATH $HDF5_VOL_DIR/include
+prepend-path     LD_LIBRARY_PATH $ABT_DIR/lib
+prepend-path     LD_LIBRARY_PATH $HDF5_ROOT/lib
+prepend-path     LD_LIBRARY_PATH $HDF5_VOL_DIR/lib
+prepend-path     PYTHONPATH H5PY_PATH
