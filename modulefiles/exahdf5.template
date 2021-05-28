@@ -12,7 +12,6 @@ set os         [uname release]
 set HOME       /home/hzheng
 
 if {[module-info mode load]} {
-    module load intelpython36
 }
 
 if {[module-info mode remove]} {
