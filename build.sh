@@ -1,7 +1,6 @@
 #!/bin/sh
 # Building HDF5
 source setup.sh
-
 source build_hdf5.sh
 source build_argobots.sh
 source build_async.sh
