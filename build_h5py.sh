@@ -16,6 +16,6 @@ cd h5py
 HDF5_MPI=ON CC=mpicc CXX=mpicxx python setup.py build
 HDF5_MPI=ON CC=mpicc CXX=mpicxx python setup.py install --prefix=$SDK_DIR/h5py
 cd -
-export H5PY_PATH=$(ls -d $SDK_DIR/h5py/lib/python$version/site-packages/*.egg)
+export H5PY_PATH=$(ls -d $SDK_DIR/h5py/lib/python$version/site-packages/h5py*.egg)
 
 
