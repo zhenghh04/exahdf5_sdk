@@ -24,6 +24,7 @@ set     SDK_DIR $EXAHDF5_ROOT/soft/
 setenv  HDF5_ROOT $SDK_DIR/hdf5
 set     HDF5_ROOT $SDK_DIR/hdf5
 setenv  HDF5_DIR $HDF5_ROOT
+setenv  HDF5_HOME $HDF5_ROOT
 setenv  HDF5_VOL_DIR $SDK_DIR/hdf5/vol
 set     HDF5_VOL_DIR $SDK_DIR/hdf5/vol
 setenv  ABT_DIR $SDK_DIR/argobots/
@@ -37,3 +38,4 @@ prepend-path     LD_LIBRARY_PATH $ABT_DIR/lib
 prepend-path     LD_LIBRARY_PATH $HDF5_ROOT/lib
 prepend-path     LD_LIBRARY_PATH $HDF5_VOL_DIR/lib
 prepend-path     PYTHONPATH H5PY_PATH
+prepend-path     PATH $SDK_DIR/h5bench/bin
