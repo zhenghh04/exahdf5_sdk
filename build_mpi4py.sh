@@ -1,5 +1,5 @@
 #!/bin/sh
-git clone https://github.com/mpi4py/mpi4py.git
+git clone -b 3.0.1 https://github.com/mpi4py/mpi4py.git
 version=$(python -c "import sys; print('%s.%s'%(sys.version_info[0], sys.version_info[1]))")
 cd mpi4py
 CC=mpicc CXX=mpicxx python setup.py build
