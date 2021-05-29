@@ -5,7 +5,7 @@ cd mpi4py
 CC=mpicc CXX=mpicxx python setup.py build
 CC=mpicc CXX=mpicxx python setup.py install --prefix=$SDK_DIR/mpi4py/
 cd -
-export MPI4PY_PATH=$SDK_DIR/mpi4py/lib/python$version/site-package
+export MPI4PY_PATH=$SDK_DIR/mpi4py/lib/python$version/site-packages
 export PYTHONPATH=$MPI4PY_PATH:$PYTHONPATH
 
 
