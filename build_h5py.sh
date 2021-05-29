@@ -1,4 +1,5 @@
 #!/bin/sh
+source build_mpi4py.sh
 echo "Building h5py"
 git clone https://github.com/h5py/h5py.git
 echo "

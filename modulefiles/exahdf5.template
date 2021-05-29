@@ -38,4 +38,5 @@ prepend-path     LD_LIBRARY_PATH $ABT_DIR/lib
 prepend-path     LD_LIBRARY_PATH $HDF5_ROOT/lib
 prepend-path     LD_LIBRARY_PATH $HDF5_VOL_DIR/lib
 prepend-path     PYTHONPATH H5PY_PATH
+prepend-path     PYTHONPATH MPI4PY_PATH
 prepend-path     PATH $SDK_DIR/h5bench/bin
