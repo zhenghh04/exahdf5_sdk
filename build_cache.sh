@@ -1,4 +1,5 @@
 #!/bin/sh
+# Build script for cache VOL, assuming HDF5_VOL_DIR is set in the make file
 git clone https://github.com/hpc-io/vol-cache
 
 cd vol-cache
