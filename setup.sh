@@ -15,5 +15,5 @@ export ABT_DIR=$SDK_DIR/argobots/
 export CC=mpicc
 export CXX=mpicxx
 cmkdir $SDK_DIR $HDF5_ROOT $HDF5_VOL_DIR $ABT_DIR $HDF5_VOL_DIR/lib $HDF5_VOL_DIR/include
-export LD_LIBRARY_PATH=$ABT_DIR/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$ABT_DIR/lib:$LD_LIBRARY_PATH
 export PATH=$HDF5_VOL_DIR/bin/:$PATH
