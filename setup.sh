@@ -16,6 +16,11 @@ export CC=mpicc
 export CXX=mpicxx
 cmkdir $SDK_DIR $HDF5_ROOT $HDF5_VOL_DIR $ABT_DIR $HDF5_VOL_DIR/lib $HDF5_VOL_DIR/include
 export LD_LIBRARY_PATH=$ABT_DIR/lib:$LD_LIBRARY_PATH
-module use $PWD/modulefiles
-export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$ABT_DIR/lib:$HDF5_VOL_DIR/lib/:$LD_LIBRARY_PATH
-export PATH=$HDF5_VOL_DIR/bin/:$PATH
+#module use $PWD/modulefiles
+
+PNETCDF=$PWD/../e3sm_io/soft/pnetcdf/
+NETCDF=$PWD/../e3sm_io/soft/netcdf-c/
+E3SM_IO=$PWD/soft/e3sm_io
+export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$ABT_DIR/lib:$HDF5_VOL_DIR/lib/:${PNETCDF}/lib:${NETCDF}/lib:$LD_LIBRARY_PATH
+export PATH=$HDF5_VOL_DIR/bin/:$PATH:$SDK_DIR/h5bench/bin:${E3SM_IO}/bin/
+export HPCTW_PRELOAD=$PWD/soft/hpctw/lib/libmpitrace.so

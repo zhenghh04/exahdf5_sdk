@@ -4,6 +4,6 @@ git clone https://github.com/hpc-io/vol-async
 mkdir -p vol-async/build
 cd vol-async/build
 export ABT_DIR=$ABT_DIR
-cmake .. -DCMAKE_INSTALL_PREFIX=$HDF5_VOL_DIR -DCMAKE_EXE_LINKER_FLAGS='-lz'
+cmake .. -DCMAKE_INSTALL_PREFIX=$HDF5_VOL_DIR -DCMAKE_EXE_LINKER_FLAGS='-lz' -DCMAKE_C_COMPILER=mpicc
 make all install
 cd -
