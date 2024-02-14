@@ -1,4 +1,5 @@
 #!/bin/sh -x
+module load PrgEnv-gnu
 function cmkdir() {
     for f in $@
     do
@@ -18,9 +19,13 @@ cmkdir $SDK_DIR $HDF5_ROOT $HDF5_VOL_DIR $ABT_DIR $HDF5_VOL_DIR/lib $HDF5_VOL_DI
 export LD_LIBRARY_PATH=$ABT_DIR/lib:$LD_LIBRARY_PATH
 #module use $PWD/modulefiles
 
-PNETCDF=$PWD/../e3sm_io/soft/pnetcdf/
-NETCDF=$PWD/../e3sm_io/soft/netcdf-c/
-E3SM_IO=$PWD/soft/e3sm_io
-export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$ABT_DIR/lib:$HDF5_VOL_DIR/lib/:${PNETCDF}/lib:${NETCDF}/lib:$LD_LIBRARY_PATH
-export PATH=$HDF5_VOL_DIR/bin/:$PATH:$SDK_DIR/h5bench/bin:${E3SM_IO}/bin/
+PNETCDF_HOME=$SDK_DIR/pnetcdf/
+NETCDF_HOME=$SDK_DIR/netcdf-c/
+NETCDF_C_HOME=$SDK_DIR/netcdf-c/
+NETCDF_F_HOME=$SDK_DIR/netcdf-f/
+E3SM_IO_HOME=$SDK_DIR/e3sm_io
+export LD_LIBRARY_PATH=$HDF5_ROOT/lib:$ABT_DIR/lib:$HDF5_VOL_DIR/lib/:${PNETCDF_HOME}/lib:${NETCDF_HOME}/lib:$LD_LIBRARY_PATH
+export PATH=$HDF5_VOL_DIR/bin/:$PATH:$SDK_DIR/h5bench/bin:${E3SM_IO_HOME}/bin/:$SDK_DIR/bin/
 export HPCTW_PRELOAD=$PWD/soft/hpctw/lib/libmpitrace.so
+export PATH=$SDK_DIR/curl/bin/:$PATH
+export LD_LIBRARY_PATH=$SDK_DIR/curl/lib/:$LD_LIBRARY_PATH

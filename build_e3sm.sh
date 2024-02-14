@@ -1,7 +1,7 @@
 #!/bin/bash
 source setup.sh
-[ -e E3SM-IO ] && git clone https://github.com/Parallel-NetCDF/E3SM-IO.git
-export E3SM_SOFT_HOME=$PWD/../e3sm_io/soft/
+git clone https://github.com/Parallel-NetCDF/E3SM-IO.git
+export E3SM_SOFT_HOME=$PWD/soft/
 cd E3SM-IO
 autoreconf -i
 ./configure --with-pnetcdf=${E3SM_SOFT_HOME}/pnetcdf \
